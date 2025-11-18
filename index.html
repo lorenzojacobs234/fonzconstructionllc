@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONZ Construction | Siding Contractor & Window Replacement in Hillsboro, OR</title>
+    <meta name="description" content="Professional siding installation, window replacement, roofing services, and home remodeling in Hillsboro, OR. Licensed contractor serving Portland metro area.">
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --accent-orange: #e67e22;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --header-dark: #0d1b2a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--header-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--primary-blue);
+            padding: 8px 0;
+            color: var(--white);
+            font-size: 0.85rem;
+        }
+        
+        .header-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .logo {
+            max-width: 280px;
+            height: auto;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.9)), url('https://fonzconstructionllc.com/wp-content/uploads/2025/10/Residential-Commercial-Contractors-in-Hillsboro-OR-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            line-height: 1.4;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-orange);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent-orange);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .section-title p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+        }
+        
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Service Areas Section */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 40px;
+        }
+        
+        .location-button {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid var(--primary-blue);
+        }
+        
+        .location-button:hover {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            line-height: 1.3;
+        }
+        
+        .blog-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .blog-link {
+            display: inline-block;
+            color: var(--accent-orange);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Citations Section */
+        .citations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .citation-link {
+            display: block;
+            background: var(--light-gray);
+            padding: 12px 15px;
+            border-radius: 5px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent-orange);
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+        
+        .citation-link:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2d3748 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .contact-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 20px;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        
+        .contact-section p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+        
+        .contact-cta {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 16px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-orange);
+        }
+        
+        .contact-cta:hover {
+            background-color: transparent;
+            color: var(--accent-orange);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--header-dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo img {
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .footer-links h3,
+        .footer-services h3 {
+            margin-bottom: 15px;
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+        }
+        
+        .footer-links ul,
+        .footer-services ul {
+            list-style: none;
+        }
+        
+        .footer-links li,
+        .footer-services li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a,
+        .footer-services a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header-contact {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+            }
+            
+            .contact-info a {
+                justify-content: center;
+                font-size: 0.8rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .logo {
+                max-width: 250px;
+                margin-bottom: 10px;
+            }
+            
+            .hero {
+                height: 50vh;
+                min-height: 400px;
+                background-attachment: scroll;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .locations-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 10px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .citations-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 45vh;
+                min-height: 350px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .locations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .location-button {
+                padding: 10px 8px;
+                font-size: 0.8rem;
+            }
+            
+            .service-card, .blog-content {
+                padding: 20px;
+            }
+            
+            .contact-section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                max-width: 200px;
+            }
+            
+            .hero {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container header-contact">
+                <div class="contact-info">
+                    <a href="tel:5038104663">
+                        📞 (503) 810-4663
+                    </a>
+                    <a href="mailto:fcamara@fonzconstruction.cc">
+                        ✉️ fcamara@fonzconstruction.cc
+                    </a>
+                    <a href="https://maps.app.goo.gl/hqvDGCzD9ChSH3Hx8">
+                        📍 PO BOX 143, Cornelius, OR 97113
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="https://fonzconstructionllc.com/">
+                    <img src="https://fonzconstructionllc.com/wp-content/uploads/2025/04/Fonz-Construction-logo-scaled-e1745929936887-2048x581.png" alt="FONZ Construction - Siding Contractor & Window Replacement">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Expert Construction Services in Hillsboro, OR</h1>
+            <p>Professional siding installation, window replacement, and comprehensive home remodeling services for residential and commercial properties throughout the Portland metro area.</p>
+            <a href="tel:5038104663" class="cta-button">Call for Free Estimate: (503) 810-4663</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Professional Construction Services</h2>
+                <p>Comprehensive home improvement and construction solutions tailored to meet your specific needs and budget requirements.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Siding Installation & Replacement</h3>
+                    <p>Professional siding services including vinyl, fiber cement, and wood siding installation and replacement for enhanced curb appeal and protection.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Window Replacement</h3>
+                    <p>Energy-efficient window replacement services that improve your home's comfort, reduce energy costs, and enhance aesthetic appeal.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Roofing Installation & Repairs</h3>
+                    <p>Complete roofing services including installation, repairs, and maintenance for all types of residential and commercial roofing systems.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Deck and Fence Construction</h3>
+                    <p>Custom deck building and fence construction services using quality materials and expert craftsmanship for lasting outdoor structures.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Framing Services</h3>
+                    <p>Professional structural framing for new construction, additions, and remodeling projects with precision and attention to detail.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tenant Improvements & Remodels</h3>
+                    <p>Commercial tenant improvement services and residential remodeling projects designed to transform your space efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section id="service-areas" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Areas We Serve</h2>
+                <p>Providing professional construction services throughout the greater Portland metropolitan area and surrounding communities.</p>
+            </div>
+            <div class="locations-grid">
+                <a href="https://fonzconstructionllc.com/locations/sherwood-or/" class="location-button">Sherwood, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/lake-oswego-or/" class="location-button">Lake Oswego, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/tualatin-or/" class="location-button">Tualatin, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/west-linn-or/" class="location-button">West Linn, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/mcminnville-or/" class="location-button">McMinnville, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/clackamas-or/" class="location-button">Clackamas, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/beaverton-or/" class="location-button">Beaverton, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/forest-grove-or/" class="location-button">Forest Grove, OR</a>
+                <a href="https://fonzconstructionllc.com/window-replacement-installation-hillsboro-or/" class="location-button">Hillsboro, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/portland-or/" class="location-button">Portland, OR</a>
+                <a href="https://fonzconstructionllc.com/locations/happy-valley-or/" class="location-button">Happy Valley, OR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Construction Insights & Expert Advice</h2>
+                <p>Stay informed with our latest articles on home improvement, construction best practices, and industry insights.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Identifying Asbestos Siding: A Homeowner's Guide</h3>
+                        <p>Learn how to recognize asbestos siding, understand its risks, and discover safe replacement options for your home's exterior.</p>
+                        <a href="https://fonzconstructionllc.com/what-does-asbestos-siding-look-like/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Vinyl Siding Lifespan: How Long Does It Really Last?</h3>
+                        <p>Discover the expected lifespan of vinyl siding, factors that affect its durability, and maintenance tips to maximize its longevity.</p>
+                        <a href="https://fonzconstructionllc.com/how-long-does-vinyl-siding-last/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Commercial Construction Costs Per Square Foot</h3>
+                        <p>Understanding commercial construction pricing, factors that influence costs, and budget planning for your business project.</p>
+                        <a href="https://fonzconstructionllc.com/commercial-construction-price-per-square-foot/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Home Building Costs: What to Expect in Today's Market</h3>
+                        <p>Comprehensive breakdown of house construction costs, including materials, labor, and factors that impact your building budget.</p>
+                        <a href="https://fonzconstructionllc.com/how-much-does-it-cost-to-build-a-house/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Understanding GMP Construction Contracts</h3>
+                        <p>Explore Guaranteed Maximum Price construction agreements, their benefits, and how they protect your project budget.</p>
+                        <a href="https://fonzconstructionllc.com/what-is-gmp-construction/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Emergency Roof Leak Repair: Interior Solutions</h3>
+                        <p>Immediate steps to take when dealing with a leaking roof, including temporary interior fixes before professional repairs.</p>
+                        <a href="https://fonzconstructionllc.com/how-to-fix-a-leaking-roof-from-the-inside/" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citations Section -->
+    <section id="citations" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us Online</h2>
+                <p>Connect with FONZ Construction across various business directories and professional platforms.</p>
+            </div>
+            <div class="citations-grid">
+                <a href="https://us.enrollbusiness.com/BusinessProfile/7175116/Fonz%20Construction" class="citation-link" target="_blank">Enroll Business</a>
+                <a href="https://www.callupcontact.com/b/businessprofile/FONZ_Construction_Siding_Contractor_amp_Window_Replacement/9615519" class="citation-link" target="_blank">CallUpContact</a>
+                <a href="https://www.zeemaps.com/map/nzolc?group=6865094&location=Hillsboro%2C%20OR%2C%20USA" class="citation-link" target="_blank">ZeeMaps</a>
+                <a href="https://www.dealerbaba.com/suppliers/construction-material-machinery-real-estate/home-garden/fonz-construction-siding-contractor-window-replacement.html" class="citation-link" target="_blank">DealerBaba</a>
+                <a href="https://www.startus.cc/company/fonz-construction-siding-contractor-window-replacement" class="citation-link" target="_blank">StartUs</a>
+                <a href="https://bizidex.com/en/fonz-construction-siding-contractor-window-replacement-construction-791045" class="citation-link" target="_blank">BizIdex</a>
+                <a href="https://www.manta.com/c/m1xdsph/fonz-construction-siding-contractor-window-replacement" class="citation-link" target="_blank">Manta</a>
+                <a href="https://www.classifiedads.com/construction_remodeling/8dd9lg2lk3ddz" class="citation-link" target="_blank">ClassifiedAds</a>
+                <a href="https://list.ly/list/DHIF-fonz-construction-siding-contractor-and-window-replacement-hillsboro-or?make_list_mode=true" class="citation-link" target="_blank">List.ly</a>
+                <a href="https://www.topgoogle.com/listing/fonz-construction-siding-contractor-window-replacement-hillsboro-or/" class="citation-link" target="_blank">TopGoogle</a>
+                <a href="https://foursquare.com/fonzc2887980" class="citation-link" target="_blank">Foursquare</a>
+                <a href="https://www.houzz.com/hznb/professionals/general-contractors/fonz-construction-siding-contractor-hillsboro-or-pfvwus-pf~1356150795" class="citation-link" target="_blank">Houzz</a>
+                <a href="https://www.blinx.biz/fonz-construction-siding-contractor-window-replacement-hillsboro-or" class="citation-link" target="_blank">Blinx</a>
+                <a href="https://www.brownbook.net/business/54345616/fonz-construction-siding-contractor-window-replacement-hillsboro-or" class="citation-link" target="_blank">BrownBook</a>
+                <a href="https://www.expatriates.com/cls/61325603.html?preview" class="citation-link" target="_blank">Expatriates</a>
+                <a href="https://1businessworld.com/company/fonz-construction-siding-contractor-window-replacement-hillsboro-or/" class="citation-link" target="_blank">1BusinessWorld</a>
+                <a href="https://mapfling.com/qpap4gj" class="citation-link" target="_blank">MapFling</a>
+                <a href="https://www.bizcommunity.com/CompanySubmitView.aspx?l=196&c=1&cid=731599&eh=4dozy&m=e" class="citation-link" target="_blank">BizCommunity</a>
+                <a href="https://freebusinessdirectory.com//search_res_show.php?co=644649" class="citation-link" target="_blank">FreeBusinessDirectory</a>
+                <a href="https://linktr.ee/fonzconstructionllc" class="citation-link" target="_blank">Linktree</a>
+                <a href="https://addyp.com/listing/nc/cornelius/find-top-best-construction-services-near-me/fonz-construction-siding-contractor-window-replacement-hillsboro-or" class="citation-link" target="_blank">Addyp</a>
+                <a href="https://patch.com/oregon/cornelius-or/business/listing/553956/fonz-construction-siding-contractor-window-replacement" class="citation-link" target="_blank">Patch</a>
+                <a href="https://pro.porch.com/cornelius-or/general-contractors/fonz-construction-siding-contractor-and-window-replacement-hillsboro-or-/pp" class="citation-link" target="_blank">Porch Pro</a>
+                <a href="https://oregon.bizhwy.com/fonz-construction-siding-contractor-window-replacement-hillsboro-or-id11590.php" class="citation-link" target="_blank">Oregon Business Highway</a>
+                <a href="https://secure.linkcentre.com/status/?url=https://fonzconstructionllc.com/" class="citation-link" target="_blank">LinkCentre</a>
+                <a href="https://www.locanto.com/hillsboro/ID_7888498366/FONZ-Construction-Siding-Contractor-Window-Replacement-Hillsb.html" class="citation-link" target="_blank">Locanto</a>
+                <a href="https://www.scribblemaps.com/maps/view/FONZ-Construction-Siding-Contractor--Window-Replacement-Hillsboro-OR/ONfnhKEGFN" class="citation-link" target="_blank">Scribble Maps</a>
+                <a href="https://www.freelistingusa.com/listings/fonz-construction-siding-contractor-window-replacement-hillsboro-or" class="citation-link" target="_blank">FreeListing USA</a>
+                <a href="https://trueen.com/business/listing/fonz-construction-siding-contractor-window-replacement/646727" class="citation-link" target="_blank">Trueen</a>
+                <a href="https://vymaps.com/US/FONZ-Construction-Siding-Contractor-Window-Replacement-VN134727/?id_new=bc74c950d6893d7d51d88db99b7e2986" class="citation-link" target="_blank">Vymaps</a>
+                <a href="https://www.bark.com/en/us/company/fonz-construction-siding-contractor-amp-window-replacement-hillsboro-or/ya7D1G/" class="citation-link" target="_blank">Bark</a>
+                <a href="https://www.fastexpert.com/pros-sidingcontractors/fonz-construction-siding-contractor-window-replacement-hillsboro-or-125154/" class="citation-link" target="_blank">FastExpert</a>
+                <a href="https://www.apsense.com/user/fonzconstructions" class="citation-link" target="_blank">APSense</a>
+                <a href="https://www.provenexpert.com/fonz-construction/?mode=preview" class="citation-link" target="_blank">ProvenExpert</a>
+                <a href="https://www.n49.com/biz/5745432/fonz-construction-siding-contractor-&-window-replacement-(hillsboro,-or)-or-cornelius-po-box-143/" class="citation-link" target="_blank">N49</a>
+                <a href="https://www.cybo.com/US-biz/fonz-construction" class="citation-link" target="_blank">Cybo</a>
+                <a href="https://www.merchantcircle.com/fonz-construction-siding-contractor-and-window-replacement-hillsboro-or-cornelius-or" class="citation-link" target="_blank">MerchantCircle</a>
+                <a href="https://cornelius.oregononline.us/profile/fonz-construction" class="citation-link" target="_blank">Oregon Online</a>
+                <a href="https://www.owler.com/company/fonzconstructionllc" class="citation-link" target="_blank">Owler</a>
+                <a href="https://www.marketlister.com/biz/fonz-construction-siding-contractor-window-replacement-hillsboro-or" class="citation-link" target="_blank">MarketLister</a>
+                <a href="https://www.sbdpro.com/business/fonz-construction-siding-contractor-hillsboro-or" class="citation-link" target="_blank">SBD Pro</a>
+                <a href="https://fonz-construction-siding-contractor-window-replacement.hub.biz/" class="citation-link" target="_blank">Hub.biz</a>
+                <a href="https://www.tuugo.us/listing/fonz-construction-hillsboro-or/" class="citation-link" target="_blank">Tuugo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>If you're ready to transform your home with craftsmanship that lasts, let's talk.</h2>
+                <p>Your dream home starts with one honest conversation. Get a free consultation today and see how FONZ Construction turns your remodeling and construction plans into reality with precision, care, and lasting craftsmanship.</p>
+                <a href="tel:5038104663" class="contact-cta">Get My Free Quote Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="https://fonzconstructionllc.com/">
+                        <img src="https://fonzconstructionllc.com/wp-content/uploads/2025/04/Fonz-Construction-logo-scaled-e1745929936887-2048x581.png" alt="FONZ Construction">
+                    </a>
+                    <p>Professional Construction Services in Hillsboro, OR</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#blog">Construction Blog</a></li>
+                        <li><a href="#service-areas">Service Areas</a></li>
+                        <li><a href="#citations">Find Us Online</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="https://fonzconstructionllc.com/siding/">Siding Installation</a></li>
+                        <li><a href="https://fonzconstructionllc.com/windows/">Window Replacement</a></li>
+                        <li><a href="https://fonzconstructionllc.com/roofing/">Roofing Services</a></li>
+                        <li><a href="https://fonzconstructionllc.com/decks-and-fences/">Deck & Fence Building</a></li>
+                        <li><a href="https://fonzconstructionllc.com/framing/">Framing Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FONZ Construction Siding Contractor & Window Replacement. All rights reserved. | PO BOX 143, Cornelius, OR 97113</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
